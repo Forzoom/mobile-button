@@ -1,0 +1,12 @@
+{
+  "name": "@forzoom/mobile-button",
+  "version": "0.0.4",
+  "description": "",
+  "main": "./dist/mobile-button.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config ./build/webpack.config.prod.js"
+  },
+  "author": "forzoom",
+  "license": "MIT"
+}
