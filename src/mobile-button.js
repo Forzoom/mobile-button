@@ -63,6 +63,8 @@ export default {
                 click: function() {
                     if (!vm.isDisabled) {
                         vm.$emit('click');
+                    } else {
+                        vm.$emit('click-when-disabled');
                     }
                 },
             },

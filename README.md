@@ -1,9 +1,17 @@
 ### Usage
 
+#### Basic
+
 ```js
 import MobileButton from '@forzoom/mobile-button';
 Vue.component('MobileButton', MobileButton);
 ```
+#### Events
+
+|event|desc|
+|---|---|
+|click|非disabled情况下点击将触发该事件|
+|click-when-disabled|disabled情况下点击将触发该事件|
 
 ### version
 
