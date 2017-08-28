@@ -17,16 +17,23 @@ export default {
         classList: {
             type: Array,
         },
+        // 所使用的标签
         tag: String,
-        to: String,
+        // 所希望去的路由
+        to: [
+            type: [ Object, String, ],
+        ],
+        // 是否是选中的状态
         isSelected: {
             type: Boolean,
             default: false,
         },
+        // 是否是禁用的状态
         isDisabled: {
             type: Boolean,
             default: false,
         },
+        // 是否是block的样式
         isBlock: {
             type: Boolean,
             default: false,
@@ -55,19 +62,33 @@ export default {
                 domProps.href = vm.to;
             }
         }
+        // click事件
+        const click = () => {
+            if (!vm.isDisabled) {
+                vm.$emit('click');
+            } else {
+                vm.$emit('click-when-disabled');
+            }
+        };
+        // touchstart事件
+        const touchstart = () => {
+            this.$emit('touchstart');
+        };
+        const on = {};
+        const nativeOn = {};
+        if (tag == 'router-link') {
+            nativeOn.click = click;
+            nativeOn.touchstart = touchstart;
+        } else {
+            on.click = click;
+            on.touchstart = touchstart;
+        }
         return h(tag, {
             'class': classList,
             props,
             domProps,
-            on: {
-                click: function() {
-                    if (!vm.isDisabled) {
-                        vm.$emit('click');
-                    } else {
-                        vm.$emit('click-when-disabled');
-                    }
-                },
-            },
+            on: on,
+            nativeOn: nativeOn,
         }, vm.$slots.default);
     },
 };
