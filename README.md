@@ -39,6 +39,6 @@ Vue.component('MobileButton', MobileButton);
 
 1. 添加touchstart事件，支持router-link和原生标签
 
-#### 0.0.7
+#### 0.0.8
 
 1. to支持object，用于支持router-link的命名路由

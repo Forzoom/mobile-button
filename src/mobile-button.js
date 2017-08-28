@@ -20,9 +20,9 @@ export default {
         // 所使用的标签
         tag: String,
         // 所希望去的路由
-        to: [
+        to: {
             type: [ Object, String, ],
-        ],
+        },
         // 是否是选中的状态
         isSelected: {
             type: Boolean,
