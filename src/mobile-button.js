@@ -63,11 +63,11 @@ export default {
             }
         }
         // click事件
-        const click = () => {
+        const click = (e) => {
             if (!vm.isDisabled) {
-                vm.$emit('click');
+                vm.$emit('click', e);
             } else {
-                vm.$emit('click-when-disabled');
+                vm.$emit('click-when-disabled', e);
             }
         };
         // touchstart事件
