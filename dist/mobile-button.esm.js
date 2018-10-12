@@ -75,7 +75,7 @@ var mobileButton = {
         };
         // touchstart事件
         var touchstart = function() {
-            this.$emit('touchstart');
+            vm.$emit('touchstart');
         };
         var on = {};
         var nativeOn = {};
