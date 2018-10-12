@@ -6,7 +6,7 @@
 
 #### Basic
 
-```js
+```javascript
 import MobileButton from '@forzoom/mobile-button';
 Vue.component('MobileButton', MobileButton);
 ```
@@ -21,12 +21,25 @@ Vue.component('MobileButton', MobileButton);
 </MobileButton>
 ```
 
-生成的html
+__生成的html__
 
 ```html
 <router-link class="btn btn-mobile btn-primary btn-block disabled" to="/path/to/target">
 	click me
 </router-link>
+```
+
+__使用类型为Object的to__
+
+```javascript
+<MobileButton tag="router-link"
+	name="primary"
+	tag="router-link"
+	:to="{ name: 'path_to_target' }"
+	:is-block="true"
+	:is-disabled="true">
+	click me
+</MobileButton>
 ```
 
 ### Props
@@ -46,11 +59,10 @@ Vue.component('MobileButton', MobileButton);
 
 ### Events
 
-|名称|描述|
-|---|---|
-|click|非disabled情况下点击将触发该事件|
-|click-when-disabled|disabled情况下点击将触发该事件|
-|touchstart|touchstart事件|
+|名称|参数|描述|
+|---|---|---|
+|click|(event)|非disabled情况下点击将触发该事件|
+|click-when-disabled|(event)|disabled情况下点击将触发该事件|
 
 ### Tip
 
