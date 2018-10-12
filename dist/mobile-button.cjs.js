@@ -1,10 +1,12 @@
+'use strict';
+
 const isUndef = (val) => val === null || val === undefined;
 /**
  *
  *
  * 传入到$slots.default中的内容将作为children
  */
-export default {
+var mobileButton = {
     name: 'MobileButton',
     props: {
         id: {
@@ -93,3 +95,5 @@ export default {
         }, vm.$slots.default);
     },
 };
+
+module.exports = mobileButton;

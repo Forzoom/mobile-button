@@ -1,12 +1,16 @@
 {
   "name": "@forzoom/mobile-button",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "",
-  "main": "./dist/mobile-button.min.js",
+  "main": "./dist/mobile-button.cjs.js",
+  "module": "./dist/mobile-button.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config ./build/webpack.config.prod.js"
+    "build": "node build/build.js"
   },
   "author": "forzoom",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "rollup": "^0.66.5"
+  }
 }
