@@ -1,4 +1,6 @@
-const isUndef = (val) => val === null || val === undefined;
+function isUndef(val) {
+    return val === null || val === undefined;
+}
 /**
  *
  *
@@ -40,21 +42,21 @@ var mobileButton = {
         },
     },
     render(h) {
-        const vm = this;
-        const classList = [
+        var vm = this;
+        var classList = [
             'btn',
             'btn-mobile',
             !isUndef(vm.name) ? 'btn-' + vm.name : null,
-            ...(vm.classList || []),
             vm.isDisabled ? 'disabled' : null,
             vm.isSelected ? 'selected' : null,
             vm.isBlock ? 'btn-block' : null,
         ];
-        const tag = isUndef(vm.tag) ? 'a' : vm.tag;
-        const domProps = isUndef(vm.id) ? {} : {
+        classList = classList.concat((vm.classList || []));
+        var tag = isUndef(vm.tag) ? 'a' : vm.tag;
+        var domProps = isUndef(vm.id) ? {} : {
             id: vm.id,
         };
-        const props = {};
+        var props = {};
         if (!isUndef(vm.to)) {
             if (tag === 'router-link') {
                 props.to = vm.to;
@@ -63,7 +65,7 @@ var mobileButton = {
             }
         }
         // click事件
-        const click = (e) => {
+        var click = function(e) {
             // 当前不是disabled情况下
             if (!vm.isDisabled) {
                 vm.$emit('click', e);
@@ -72,11 +74,11 @@ var mobileButton = {
             }
         };
         // touchstart事件
-        const touchstart = () => {
+        var touchstart = function() {
             this.$emit('touchstart');
         };
-        const on = {};
-        const nativeOn = {};
+        var on = {};
+        var nativeOn = {};
         if (tag == 'router-link') {
             nativeOn.click = click;
             nativeOn.touchstart = touchstart;
@@ -85,7 +87,7 @@ var mobileButton = {
             on.touchstart = touchstart;
         }
         return h(tag, {
-            'class': classList,
+            class: classList,
             props: props,
             domProps: domProps,
             on: on,

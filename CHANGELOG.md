@@ -23,3 +23,8 @@
 #### 0.0.9
 
 1. click事件添加event参数
+
+#### 0.1.2
+
+1. 使用rollup替换webpack
+1. 添加index.d.ts
