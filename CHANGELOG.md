@@ -28,3 +28,7 @@
 
 1. 使用rollup替换webpack
 1. 添加index.d.ts
+
+#### 0.1.4
+
+1. 修改部分es6语法

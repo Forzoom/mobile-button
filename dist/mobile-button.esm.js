@@ -41,7 +41,7 @@ var mobileButton = {
             default: false,
         },
     },
-    render(h) {
+    render: function(h) {
         var vm = this;
         var classList = [
             'btn',
