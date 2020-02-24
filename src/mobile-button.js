@@ -77,15 +77,21 @@ export default {
         var touchstart = function() {
             vm.$emit('touchstart');
         };
-        var on = {};
-        var nativeOn = {};
+        var on = null;
+        var nativeOn = null;
+
         if (tag == 'router-link') {
-            nativeOn.click = click;
-            nativeOn.touchstart = touchstart;
+            nativeOn = {
+                click: click,
+                touchstart: touchstart,
+            };
         } else {
-            on.click = click;
-            on.touchstart = touchstart;
+            on = {
+                click: click,
+                touchstart: touchstart,
+            };
         }
+
         return h(tag, {
             class: classList,
             props: props,
