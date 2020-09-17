@@ -6,7 +6,7 @@ function isUndef(val) {
  *
  * 传入到$slots.default中的内容将作为children
  */
-export default {
+export const MobileButton = {
     name: 'MobileButton',
     props: {
         id: {

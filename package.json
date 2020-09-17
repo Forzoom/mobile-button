@@ -1,16 +1,25 @@
 {
   "name": "@forzoom/mobile-button",
-  "version": "0.1.5",
+  "version": "0.2.1",
   "description": "",
   "main": "./dist/mobile-button.cjs.js",
   "module": "./dist/mobile-button.esm.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node build/build.js"
   },
   "author": "forzoom",
   "license": "MIT",
-  "dependencies": {
-    "rollup": "^0.66.5"
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@rollup/plugin-babel": "^5.2.1",
+    "rollup": "^2.27.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "vue": "^2.6.12"
   }
 }

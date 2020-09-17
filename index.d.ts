@@ -1,1 +1,0 @@
-declare module '@forzoom/mobile-button' {}
